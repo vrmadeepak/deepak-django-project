@@ -130,5 +130,6 @@ dmypy.json
 
 
 # github
-# .github
-# main.yml
+.github
+main.yml
+uat.yml
