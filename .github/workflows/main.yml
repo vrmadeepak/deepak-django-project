@@ -1,9 +1,9 @@
-name: CICD PROD
+name: CICD SIT
 
 on:
   push:
     branches:
-      - main
+      - uat
 jobs:
   web-deploy:
     name: Deploy
@@ -17,5 +17,5 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{ secrets.FTP_SERVER }}
-        username: ${{ secrets.FTP_PROD_USERNAME }}
+        username: ${{ secrets.FTP_SIT_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
